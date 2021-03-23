@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 // Port website will run on
 //app.listen(process.env.PORT ||8080);
 const port = 8000;
-app.listen(port, () => {console.log(`Example app listening on port ${port}!`)});
+app.listen(process.env.PORT  || port, () => {console.log(`Example app listening on port ${port}!`)});
 // *** GET Routes - display pages ***
 // Root Route
 app.get('/', function (req, res) {
